@@ -39,11 +39,7 @@ public class Sensor {
     }
 
     public List<TemperatureState> getHistoric() {
-        if (this.historics.size() > 0) {
-            return this.historics.subList(0, 15);
-        } else {
-            return this.historics;
-        }
+        return this.historics.size() > 0 ? this.historics.subList(0, 15) : this.historics;
     }
 
     public void setHOTInterval(TemperatureInterval hotInterval) {
